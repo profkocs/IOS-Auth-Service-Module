@@ -11,7 +11,7 @@
 */
 
 import Foundation
-public class RestManager :RestManagerProtocol{
+public class RestManager:RestManagerProtocol{
     
     private var task: URLSessionDataTask?
     
