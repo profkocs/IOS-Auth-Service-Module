@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6751A6F5269F2D440085448A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6751A6F4269F2D440085448A /* AuthService.swift */; };
-		6751A6F7269F2DA30085448A /* AuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6751A6F6269F2DA30085448A /* AuthServiceProtocol.swift */; };
 		6751A6FA269F2F330085448A /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6751A6F9269F2F330085448A /* RequestBuilder.swift */; };
 		67713315269F5FF900A79449 /* IOS_Authentication_Service_Module.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6780C956269CAA330053D4D4 /* IOS_Authentication_Service_Module.framework */; };
 		6771331D269F626700A79449 /* EndpointURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6771331C269F626700A79449 /* EndpointURL.swift */; };
@@ -22,6 +21,7 @@
 		6780C96B269CAF6F0053D4D4 /* RestServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6780C96A269CAF6F0053D4D4 /* RestServiceProtocol.swift */; };
 		6780C97B269CC2A50053D4D4 /* RestModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6780C97A269CC2A50053D4D4 /* RestModelProtocol.swift */; };
 		6780C97F269CCBA70053D4D4 /* RestManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6780C97E269CCBA70053D4D4 /* RestManagerProtocol.swift */; };
+		67956B6A26A0516500F0BD83 /* EndpointHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67956B6926A0516500F0BD83 /* EndpointHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +43,6 @@
 
 /* Begin PBXFileReference section */
 		6751A6F4269F2D440085448A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		6751A6F6269F2DA30085448A /* AuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceProtocol.swift; sourceTree = "<group>"; };
 		6751A6F9269F2F330085448A /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		67713310269F5FF900A79449 /* IOS_Authentication_Service_ModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOS_Authentication_Service_ModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6771331C269F626700A79449 /* EndpointURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointURL.swift; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		6780C96A269CAF6F0053D4D4 /* RestServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestServiceProtocol.swift; sourceTree = "<group>"; };
 		6780C97A269CC2A50053D4D4 /* RestModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestModelProtocol.swift; sourceTree = "<group>"; };
 		6780C97E269CCBA70053D4D4 /* RestManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestManagerProtocol.swift; sourceTree = "<group>"; };
+		67956B6926A0516500F0BD83 /* EndpointHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +104,6 @@
 				6780C966269CACA00053D4D4 /* RestService.swift */,
 				6780C96A269CAF6F0053D4D4 /* RestServiceProtocol.swift */,
 				6751A6F4269F2D440085448A /* AuthService.swift */,
-				6751A6F6269F2DA30085448A /* AuthServiceProtocol.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -122,6 +121,7 @@
 			children = (
 				6771331C269F626700A79449 /* EndpointURL.swift */,
 				6771331E269F628C00A79449 /* EndpointMethod.swift */,
+				67956B6926A0516500F0BD83 /* EndpointHeader.swift */,
 			);
 			path = Endpoint;
 			sourceTree = "<group>";
@@ -325,9 +325,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6780C96B269CAF6F0053D4D4 /* RestServiceProtocol.swift in Sources */,
-				6751A6F7269F2DA30085448A /* AuthServiceProtocol.swift in Sources */,
 				6780C97B269CC2A50053D4D4 /* RestModelProtocol.swift in Sources */,
 				6780C965269CAB850053D4D4 /* RestManager.swift in Sources */,
+				67956B6A26A0516500F0BD83 /* EndpointHeader.swift in Sources */,
 				6751A6F5269F2D440085448A /* AuthService.swift in Sources */,
 				6780C967269CACA00053D4D4 /* RestService.swift in Sources */,
 				6771331D269F626700A79449 /* EndpointURL.swift in Sources */,

@@ -6,8 +6,12 @@
 //  Copyright © 2021 profkocs. All rights reserved.
 //
 
+/*
+    Class Responsibility -> Adjusting request that will be sended to manager.
+*/
+
 import Foundation
-public class AuthService:RestService, AuthServiceProtocol{
+public class AuthService:RestService{
     
     private var builder:RequestBuilder?
     
@@ -15,31 +19,25 @@ public class AuthService:RestService, AuthServiceProtocol{
         super.init(manager: manager)
     }
     
-  
-    func adjustRequest(url:String, method:String, model:RestModelProtocol){
+    
+    func adjustSigninRequest(model:RestModelProtocol){
         
-        setDefaultHeader()
-        setBuilder(url: url)
-        setMethod(method: method)
+        setBuilder(url: EndpointURL.signin.rawValue)
+        setHeader()
+        setMethod(method:EndpointMethod.post.rawValue)
         setBody(body: model.getEncodedModel())
-        
-        self.setRequest(request: self.builder!.getRequest()!)
+    
     }
     
-    func adjustRequestWithHeader(header: [(String, String)], url: String, method: String, model: RestModelProtocol) {
-        
-        setDefaultHeader()
-        addHeader(header: header)
-        setBuilder(url: url)
-        setMethod(method: method)
-        setBody(body: model.getEncodedModel())
-        
-        self.setRequest(request: self.builder!.getRequest()!)
-    }
     
     private func setBuilder(url:String){
         
-        self.builder = RequestBuilder(url:url)
+        self.builder = RequestBuilder(url: url)
+    }
+    
+    private func setHeader(){
+        
+        self.builder?.setHeader(header:prepareHeader())
     }
     
     private func setMethod(method:String){
@@ -49,20 +47,16 @@ public class AuthService:RestService, AuthServiceProtocol{
     
     private func setBody(body:Data?){
         
-        if body != nil {
+        if(body != nil){
             
-            self.builder!.setBody(body:body!)
+            self.builder?.setBody(body: body!)
         }
     }
-
-    private func setDefaultHeader(){
-        
-        self.builder!.setDefaultHeader()
-    }
     
-    private func addHeader(header:[(String, String)]){
+    
+    private func prepareHeader()->[(String,String)]{
         
-        self.builder!.setHeader(header: header)
+        return [(EndpointHeader.content_type.rawValue,EndpointHeader.application_json.rawValue)]
     }
     
 }

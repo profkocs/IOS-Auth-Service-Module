@@ -11,4 +11,6 @@ protocol RestServiceProtocol {
     
     func startService(request:URLRequest, completionHandler: @escaping(_:Data?, _:URLResponse, _:Error?)->())
     func stopService()
+    
+    
 }

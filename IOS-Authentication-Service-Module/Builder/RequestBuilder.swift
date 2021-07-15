@@ -16,10 +16,12 @@ class RequestBuilder{
         self.request = URLRequest(url: URL(string: url)!)
     }
     
-    func setDefaultHeader(){
+    func setHeader(header:[(String,String)]){
         
-        // default header
-        
+        for data in header{
+            
+            self.request.addValue(data.0, forHTTPHeaderField: data.1)
+        }
     }
     
     func setMethod(method:String){
@@ -30,16 +32,6 @@ class RequestBuilder{
     func setBody(body:Data){
         
         self.request.httpBody = body
-    }
-    
-   
-    
-    func setHeader(header:[(String,String)]){
-        
-        for data in header{
-            
-            self.request.addValue(data.0, forHTTPHeaderField: data.1)
-        }
     }
     
     func getRequest()->URLRequest?{
